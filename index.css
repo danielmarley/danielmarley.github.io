@@ -1,0 +1,210 @@
+[data-theme="dark"] {  
+  --background-color: #004472;
+  --text-color: white;
+
+  --hover-button-color: rgba(255, 255, 255, 0.2);
+
+  --accent-color: #FCAB11;
+  --active-color: rgb(137, 182, 250);
+  --disabled-color: grey;
+  --shadow-color: black;
+
+  --menu-background-color: #092334;
+}
+
+body {
+  font-family: "Funnel Sans", sans-serif;
+  margin: 0px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Funnel Display", serif;
+}
+
+#theme-selector {
+  position: fixed;
+  right: 0.5em;
+  top: 0.5em;
+  z-index: 30;
+}
+
+#theme-selector > form > fieldset {
+  background-color: var(--background-color);
+}
+
+.square-icon-button {
+  padding: 0.2em;
+  background-color: rgba(0,0,0,0.0);
+  border-radius: 5px;
+  border: none;  
+  cursor: pointer;
+  color: inherit;
+
+  font-size: 1.4em;
+  text-align: left;
+  height: fit-content;
+  width: fit-content;
+
+  svg {
+    left: 1px;
+  }
+}
+
+.icon-button {
+  padding: 0.2em;
+  background-color: rgba(0,0,0,0.0);
+  border-radius: 50%;
+  border: none;  
+  cursor: pointer;
+  color: inherit;
+
+  font-size: 1.4em;
+  text-align: left;
+}
+
+.icon-button:hover, .square-icon-button:hover {
+  background-color: var(--hover-button-color);
+}
+
+#palette-icon {
+  float: right;
+  margin-bottom: 0.2em;
+}
+
+#theme-select{
+  display: none;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: minmax(20%, 350px) 1fr;
+  height: 100vh;
+  width: 100vw;
+}
+
+#menu {
+  background-color: var(--menu-background-color);
+  color: var(--menu-color);
+  padding: 32px;
+}
+
+#profile {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+#name {
+  font-size: 2.7em;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+  color: var(--accent-color)
+}
+
+.navigation {
+  font-family: "Funnel Display", serif;
+  width: 100%;
+  padding: 0.4em 0;
+  background-color: rgba(0,0,0,0.0);
+  border: none;  
+  cursor: pointer;
+  color: inherit;
+
+  font-size: 1.4em;
+  text-align: left;
+
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+
+  .pointer {
+    opacity: 0.0;
+  }  
+}
+
+.pointer {
+  transition: opacity 0.3s ease, margin 0.3s ease;
+  margin-right: 0.1em;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+#navWrapper:not(:hover) {
+  .navigation.selected {
+    opacity: 1.0;
+    .pointer {
+      opacity: 1.0;
+    }
+  }
+}
+
+.navigation:hover {
+  opacity: 1.0;
+  .pointer {
+    opacity: 1.0;
+  }
+}
+
+.navigation:not(.selected):hover {
+  opacity: 1.0;
+  .pointer {
+    margin-right: 0.5em;
+  }
+}
+
+#footer {
+  position: fixed;
+  left: 0px;
+  bottom: 1em;
+  width: fit-content;
+  align-content: center;
+  margin: auto 0px;
+  width: minmax(20%, 350px);
+  min-width: 350px;
+  max-width: 20vw;
+  display: block;
+  text-align: center;
+}
+
+#tabs {
+  height: 100vh;
+  margin: 0px 2.5em
+}
+
+.tab {
+  height: 0px;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: auto;
+
+  transition: height 0.3s ease;
+}
+
+.tab.selected {
+  height: 100%;
+}
+
+.raised1 {
+  z-index: 10;
+  box-shadow: 0px 2px 5px var(--shadow-color);
+}
+.raised2 {
+  z-index: 11;
+  box-shadow: 0px 4px 7px var(--shadow-color);
+}
+.raised3 {
+  z-index: 12;
+  box-shadow: 0px 8px 10px var(--shadow-color);
+}
+.raised4 {
+  z-index: 13;
+  box-shadow: 0px 16px 10px var(--shadow-color)s;
+}
+
+.newline-preserve {
+  white-space: pre-wrap;
+}
+
+.tarb {
+  display: none;
+}

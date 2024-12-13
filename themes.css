@@ -1,0 +1,70 @@
+[data-theme="light"] {
+  --background-color: #f9f9f9;
+  --text-color: black;
+
+  --hover-button-color: rgba(150, 150, 150, 0.3);
+
+  --accent-color: #dec24d;
+  --active-color: rgb(85, 153, 255);
+  --disabled-color: rgb(94, 94, 94);
+  --shadow-color: rgb(0,0,0,0.5);
+
+  --menu-background-color: #5186A9;
+}
+
+[data-theme="mono"] {
+  --background-color: #212121;
+  --text-color: white;
+
+  --hover-button-color: rgba(255, 255, 255, 0.2);
+
+  --accent-color: #ffffff;
+  --active-color: rgb(85, 153, 255);
+  --disabled-color: grey;
+  --shadow-color: black;
+
+  --menu-background-color: #121212;
+
+  filter: grayscale(1);
+}
+
+[data-theme="brat"] {
+  --background-color: #FFFFFF;
+  --text-color: black;
+
+  --hover-button-color: rgba(150, 150, 150, 0.3);
+  
+  --accent-color: black;
+  --active-color: #8ACD00;
+  --disabled-color: grey;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+
+  --menu-background-color: #8ACD00;
+
+  .tarb {
+    display: inline;
+  }
+
+  body {
+    font-family: "Arial", sans-serif;
+    text-align: justify;
+    text-align-last: justify;
+  }
+  
+  h1, h2, h3, h4, h5 {
+    font-family: 'Arial Narrow', sans-serif;
+    filter: blur(1.2px);
+    text-transform: lowercase;
+  }
+
+  .navigation {
+    text-transform: lowercase;
+    font-family: 'Arial Narrow', sans-serif;
+  }
+
+  #name {
+    font-size: xx-large;
+    text-align: justify;
+    text-align-last: justify;
+  }
+}
