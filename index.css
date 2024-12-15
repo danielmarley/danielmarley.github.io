@@ -87,12 +87,18 @@ h1, h2, h3, h4, h5 {
 #menu {
   background-color: var(--menu-background-color);
   color: var(--menu-color);
-  padding: 32px;
+  padding: 0px 32px;
+  display: grid;
+  padding-bottom: 0px;
+  grid-template-rows: 0fr 0fr 0fr 1fr 0fr;
+  max-height: 100vh;
+  min-height: fit-content;
 }
 
 #profile {
   max-width: 100%;
   border-radius: 50%;
+  margin-top: 32px;
 }
 
 #name {
@@ -100,6 +106,10 @@ h1, h2, h3, h4, h5 {
   margin-top: 0.3em;
   margin-bottom: 0.3em;
   color: var(--accent-color)
+}
+
+#navWrapper {
+  height: min-content;
 }
 
 .navigation {
@@ -152,18 +162,22 @@ h1, h2, h3, h4, h5 {
   }
 }
 
+#spacer {
+  height: --webkit-fill-available;
+}
+
 #footer {
-  position: fixed;
+  position: relative;
   left: 0px;
-  bottom: 1em;
-  width: fit-content;
+  width: 100%;
   align-content: center;
   margin: auto 0px;
-  width: minmax(20%, 350px);
-  min-width: 350px;
-  max-width: 20vw;
-  display: block;
   text-align: center;
+
+  button {
+    position: relative;
+    bottom: 8px;
+  }
 }
 
 #tabs {
