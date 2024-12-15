@@ -41,8 +41,8 @@ function registerThemeSelect() {
 
   const prevTheme = getCookie("danielmarleytheme");
   if ( prevTheme !== null ) {
+    document.documentElement.setAttribute("data-theme", prevTheme);
     $(`input[type="radio"][value="${prevTheme}"]`).prop('checked', true);
-    // document.documentElement.setAttribute("data-theme", prevTheme);
   }
 }
 
