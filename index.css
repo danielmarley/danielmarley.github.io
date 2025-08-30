@@ -9,7 +9,7 @@
   --disabled-color: grey;
   --shadow-color: black;
 
-  --tile-color: rgb(0, 31, 72);
+  --tile-color: rgb(30, 52, 82);
 
   --menu-background-color: #092334;
 }
@@ -266,6 +266,13 @@ p {
   margin-block-end: 32px;
   li {
     line-height: 18pt;
+  }
+
+  h2 {
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
   }
 }
 .job {   
