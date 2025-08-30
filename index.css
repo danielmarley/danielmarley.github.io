@@ -1,5 +1,5 @@
 [data-theme="dark"] {  
-  --background-color: #004472;
+  --background-color: #592f00;
   --text-color: white;
 
   --hover-button-color: rgba(255, 255, 255, 0.2);
@@ -9,7 +9,7 @@
   --disabled-color: grey;
   --shadow-color: black;
 
-  --tile-color: rgb(30, 52, 82);
+  --tile-color: #321905;
 
   --menu-background-color: #092334;
 }
