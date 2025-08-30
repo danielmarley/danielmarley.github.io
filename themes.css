@@ -1,5 +1,5 @@
 [data-theme="light"] {
-  --background-color: #f9f9f9;
+  --background-color: rgb(245, 245, 245);
   --text-color: black;
 
   --hover-button-color: rgba(150, 150, 150, 0.3);
@@ -8,6 +8,8 @@
   --active-color: rgb(85, 153, 255);
   --disabled-color: rgb(94, 94, 94);
   --shadow-color: rgb(0,0,0,0.5);
+
+  --tile-color: rgb(255, 255, 255);
 
   --menu-background-color: #5186A9;
 }
@@ -22,6 +24,8 @@
   --active-color: rgb(85, 153, 255);
   --disabled-color: grey;
   --shadow-color: black;
+
+  --tile-color: rgb(0, 82, 191);
 
   --menu-background-color: #121212;
 
@@ -38,6 +42,8 @@
   --active-color: #8ACD00;
   --disabled-color: grey;
   --shadow-color: rgba(0, 0, 0, 0.1);
+
+  --tile-color: #ffffff;
 
   --menu-background-color: #8ACD00;
 

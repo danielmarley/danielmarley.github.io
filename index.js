@@ -1,24 +1,22 @@
 function registerEvents() {
-  loadJsonContent()
-
-  $('button.navigation').click(e => {
+  $('button.navigate').click(e => {
     navigate(e)
   })
+
+  $("#resumeDownload").click(e => {
+    const link = document.createElement("a");
+    link.href = "content/Marley Resume.pdf";
+    link.download = "Marley Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
 
   registerThemeSelect()
 
   $('button[data-link]').click(e => {
     window.open($(e.currentTarget).data('link'), '_blank');
   })
-}
-
-function loadJsonContent() {
-  for (let key in pageContent) {
-    for (let section in pageContent[key]) {
-      $(`#${key} > #${section}`).addClass('newline-preserve')
-      $(`#${key} > #${section}`).text(pageContent[key][section])
-    }
-  }
 }
 
 function registerThemeSelect() {
@@ -51,7 +49,7 @@ function navigate(e){
   if ($target.hasClass('selected'))
     return;
 
-  $('button.navigation').removeClass('selected')
+  $('button.menuItem').removeClass('selected')
   $target.addClass('selected');
 
   const tabToOpen = $target.data('tab');

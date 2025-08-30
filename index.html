@@ -45,10 +45,15 @@
         <h1 id="name">Daniel Marley<span class="tarb">'s website and it's the same but it's brat so it's not</span></h1>
         
         <div id="navWrapper">
-          <button class="navigation selected" type="button" data-tab="background"><span class="pointer">></span>Background</button>
-          <button class="navigation" type="button" data-tab="experience"><span class="pointer">></span>Experience</button>
-          <button class="navigation" type="button" data-tab="projects"><span class="pointer">></span>Projects</button>
-          <button class="navigation" type="button" data-tab="papers"><span class="pointer">></span>Papers</button>
+          <button class="menuItem navigate selected" type="button" data-tab="background"><span class="pointer">></span>Background</button>
+          <button class="menuItem navigate" type="button" data-tab="experience"><span class="pointer">></span>Experience</button>
+          <button class="menuItem navigate" type="button" data-tab="projects"><span class="pointer">></span>Projects</button>
+          <button id="resumeDownload" class="menuItem" type="button" data-tab="resume"><span class="pointer">></span>Resume 
+            <svg width="17pt" height="17pt" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.5535 16.5061C12.4114 16.6615 12.2106 16.75 12 16.75C11.7894 16.75 11.5886 16.6615 11.4465 16.5061L7.44648 12.1311C7.16698 11.8254 7.18822 11.351 7.49392 11.0715C7.79963 10.792 8.27402 10.8132 8.55352 11.1189L11.25 14.0682V3C11.25 2.58579 11.5858 2.25 12 2.25C12.4142 2.25 12.75 2.58579 12.75 3V14.0682L15.4465 11.1189C15.726 10.8132 16.2004 10.792 16.5061 11.0715C16.8118 11.351 16.833 11.8254 16.5535 12.1311L12.5535 16.5061Z"/>
+              <path d="M3.75 15C3.75 14.5858 3.41422 14.25 3 14.25C2.58579 14.25 2.25 14.5858 2.25 15V15.0549C2.24998 16.4225 2.24996 17.5248 2.36652 18.3918C2.48754 19.2919 2.74643 20.0497 3.34835 20.6516C3.95027 21.2536 4.70814 21.5125 5.60825 21.6335C6.47522 21.75 7.57754 21.75 8.94513 21.75H15.0549C16.4225 21.75 17.5248 21.75 18.3918 21.6335C19.2919 21.5125 20.0497 21.2536 20.6517 20.6516C21.2536 20.0497 21.5125 19.2919 21.6335 18.3918C21.75 17.5248 21.75 16.4225 21.75 15.0549V15C21.75 14.5858 21.4142 14.25 21 14.25C20.5858 14.25 20.25 14.5858 20.25 15C20.25 16.4354 20.2484 17.4365 20.1469 18.1919C20.0482 18.9257 19.8678 19.3142 19.591 19.591C19.3142 19.8678 18.9257 20.0482 18.1919 20.1469C17.4365 20.2484 16.4354 20.25 15 20.25H9C7.56459 20.25 6.56347 20.2484 5.80812 20.1469C5.07435 20.0482 4.68577 19.8678 4.40901 19.591C4.13225 19.3142 3.9518 18.9257 3.85315 18.1919C3.75159 17.4365 3.75 16.4354 3.75 15Z"/>
+              </svg>
+          </button>
         </div>
 
         <div id="spacer"></div>
@@ -72,16 +77,112 @@
         <div id="background" class="tab selected">
           <h1>About Me</h1>
           <p id="text">
+            My name is Daniel Marley, I'm 26, currently based in Philadelphia, and a full-time, full-stack Software Engineer at J.P. Morgan Chase. I've been working full time since graduating from The George Washington University in 2020 with a B.S. in Computer Science and recently completed my Master's degree in Artificial Intelligence at The Johns Hopkins University.
+          </p>
+          <p>
+            AI has been a strong interest of mine since my time in undergrad, where it was my area of focus in my major. Looking forward, with my Master's degree in hand, I am eagerly searching for projects where I can apply my skills. I want to leverage AI to solve real-world problems that have meaningful impact, particularly in areas of sustainability and health.
+          </p>
+          <p>
+            Outside of work, I stay active in local recreational sport leagues for volleyball, dodgeball, and kickball. I've recently returned to wheelthrowing as a creative outlet and also like to kayak on the Delaware River when time and weather allow it. These hobbies keep me balanced, inspired, and energized for both personal and professional pursuits.
           </p>
         </div>
         <div id="experience" class="tab">
           <h1>Experience</h1>
+          <div class="job">
+            <h2>JPMorgan Chase — Software Engineer III <span class="date">2023 – Present</span></h2>
+            <h3>Card Acquisition and Marketing Platform</h3>
+            <ul>
+              <li>Worked across two teams as a full-stack engineer, providing DevOps expertise as well as designing and implementing new features</li>
+              <li>Launched a new, in-house A/B testing framework to drive new marketing user experiences; generated an annualized increase in revenue of $60mm within first year, exceeding projections</li>
+              <li>Served as coordinator between business, design, analytics, and product teams in relation to releasing our initial set of tests and customer deliverables</li>
+              <li>Lead several experiments in design and implementation</li>
+              <li>Developed and presented a proof-of-concept AI system to manage A/B testing for company-wide hackathon</li>
+            </ul>
+          </div>
+        
+          <div class="job">
+            <h2>Lockheed Space — Software Engineer II <span class="date">2021 – 2023</span></h2>
+            <h3>Team 3</h3>
+            <ul>
+              <li>Joined legacy program to help guide modernization, including move to web displays from Windows Forms, containerization, .NET version migration, move to microservices from monolithic architecture, and shift to CI/CD</li>
+              <li>Addressed bugs from testing and operations as well as driving new development</li>
+              <li>Quickly became a lead on the team for MVC development, transitioning multiple displays and major functionalities to web</li>
+              <li>Lead spike to containerize supporting services as first step to dockerization</li>
+            </ul>
+          </div>
+        
+          <div class="job">
+            <h2>Lockheed Space — Software Engineer I <span class="date">2020 – 2021</span></h2>
+            <h3>Team 2</h3>
+            <ul>
+              <li>Joined a small team of 2 for short 4 month spurt to help cover immediate needs in full-stack development, focusing on front-end</li>
+              <li>Mature program with microservice architecture built for commanding users of a specific space asset</li>
+              <li>Assisted with live demos and tests for the customer and stakeholders</li>
+            </ul>
+        
+            <h3>Team 1</h3>
+            <ul>
+              <li>R&D project being brought to production with the goal of simplifying satellite commanding for multiple different asset types with limited resources</li>
+              <li>Modern microservice architecture with Angular frontend deployed to Kubernetes cluster</li>
+              <li>Rejoined project from internship</li>
+              <li>Led charge to revamp frontend for microservice while still building out core functionalities for the product in a full-stack capacity</li>
+              <li>Was one of 4 critical teammates who brought the project to achieve its release goals</li>
+              <li>Assisted in critical enterprise and integration testing</li>
+              <li>Presented directly to the customer and shareholders on several occasions for demos and major milestone testing</li>
+              <li>Spearheaded networking and security for the application’s deployment</li>
+              <li>Built out end-to-end test as a part of standard development</li>
+              <li>Quickly became a lead on the team for UI development</li>
+            </ul>
+          </div>
         </div>
         <div id="projects" class="tab">
           <h1>Projects</h1>
-        </div>
-        <div id="papers" class="tab">
-          <h1>Papers</h1>
+          <div class="project">
+            <h2>Multi-Modal Model Research in Chest X-Ray Data</h2>
+            <ul>
+              <li>Extended research of an existing paper that built a multi-modal transformer-based model to accurately diagnose chest conditions based on scan and patient data</li>
+              <li>Explored boosting clinical accuracy by altering the architecture of the model, aiming to improve the consideration of patient medical reports in classification</li>
+            </ul>
+          </div>
+        
+          <div class="project">
+            <h2>FactCheckLLM</h2>
+            <ul>
+              <li>Developed and tested an LLM system based around a plugin to identify, research, fact check and ultimately annotate significant claims in a user’s browser; based on the open source Llama3 model family</li>
+              <li>Tested against local benchmark framework, marking performance against Politifact’s previous publications, the FEVER (Fact Extraction and Verification) LLM Benchmark, and the AVERITEC (Automated Verification of Textual Claims) LLM Benchmark</li>
+            </ul>
+          </div>
+        
+          <div class="project">
+            <h2>Hi-YAH (Help You Already Have)</h2>
+            <ul>
+              <li>Participated in hackathon to develop LLM based HR chatbot designed to help employees with disabilities explore resources available to them at their location</li>
+              <li>Built with use of OpenAI API and collection of HR resources we fed to the model based on relevance to user’s initial prompt</li>
+            </ul>
+          </div>
+        
+          <div class="project">
+            <h2>CAPTCHA breaker</h2>
+            <ul>
+              <li>Fuzzy logic AI system to parse and decode text-based CAPTCHA security measures</li>
+              <li>From scratch methods of image processing and feature extraction alongside ML model that translates human heuristics and rules to a complex decision boundary</li>
+            </ul>
+          </div>
+        
+          <div class="project">
+            <h2>Artificial-Intelligence Bias Detection and Reduction</h2>
+            <ul>
+              <li>Generalized executable designed to detect racial bias within datasets and pre-process the data in a way to effectively reduces learned bias within a model without significant impacts to efficacy</li>
+            </ul>
+          </div>
+        
+          <div class="project">
+            <h2>VVOIP (Verified Voice Over Internet Protocol)</h2>
+            <ul>
+              <li>Drafted RFC and protocol to secure Voice Over Internet Protocol (VOIP), enforcing authentication to prevent number spoofing and reduce success rates of spam calls</li>
+              <li>Implemented working prototype phone and implementation through Angular and deployed onto AWS</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
