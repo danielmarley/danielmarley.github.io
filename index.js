@@ -101,13 +101,11 @@ function registerThemeSelect() {
 
   $('input[type="radio"][name="theme"]').on('change', function() {
     $('#theme-select').hide()
-    console.log(`Selected value: ${this.value}`);
     document.documentElement.setAttribute("data-theme", this.value);
 
     const color = getComputedStyle(document.documentElement)
                .getPropertyValue('--menu-background-color')
                .trim();
-    console.log(color);
     document.querySelector('meta[name="theme-color"]')
             .setAttribute('content', color);
 
