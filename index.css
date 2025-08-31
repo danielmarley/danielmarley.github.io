@@ -4,6 +4,12 @@
   --text-color: white;
 
   --hover-button-color: rgba(255, 255, 255, 0.2);
+  --button-color: rgba(255, 255, 255, 0.1);
+
+  --dramatic-hover-button-color: rgba(255, 255, 255, 0.2);
+  --dramatic-button-color: rgba(255, 255, 255, 0.0);
+
+  --carousel-background: rgba(0, 0, 0, 0.6);
 
   --accent-color: #FCAB11;
   --active-color: rgb(137, 182, 250);
@@ -14,6 +20,164 @@
   /* --tile-color: #321905; */
 
   --menu-background-color: #092334;
+}
+
+@media only screen and (max-width: 600px) {
+  #grid {
+    display: contents;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: auto;
+  }
+  
+  #menu {
+    position: fixed;
+    right: 100%;
+    top: 0px;
+    height: 100vh;
+    background-color: var(--menu-background-color);
+    color: var(--menu-color);
+    padding: 0px 32px;
+    display: grid;
+    padding-bottom: 0px;
+    grid-template-rows: 0fr 0fr 0fr 1fr 0fr;
+    max-height: 100vh;
+    min-height: fit-content;
+    min-width: min-content;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+    z-index: 50;
+  }
+
+  #menu.open {
+    transform: translateX(100%);
+  }
+
+  #tabs {
+    margin: 0px 2em;
+  }
+
+  #toolbar {
+    position: sticky;
+    top: 0px;
+    background-color: var(--menu-background-color);
+    width: 100vw;
+    height: 4em;
+  }
+
+  #toolbar > * {
+    display: inline;
+  }
+
+  #toolbarName {
+    color: var(--accent-color)
+  }
+
+  #hamburger {
+    left: 0.5em;
+    top: 0.5em;
+    position: relative;
+  }
+
+  #theme-selector {
+    position: relative;
+  }
+
+  #theme-select {
+    width: fit-content;
+    position: fixed;
+    right: 0.5em;
+    margin-top: 0.8em;
+  }
+
+  #palette-icon {
+    left: 0.5em;
+    top: 0.5em;
+    position: relative;
+    float: right;
+    transform: translateX(-50%);
+  }
+
+  .carousel {
+    width: 95% !important;
+  }
+
+  #tint {
+    background-color: rgba(0, 0, 0);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  #tint.open {
+    top: 0px;
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 45;
+    opacity: 0.6;
+  }
+
+  .icon-button {
+    background-color: var(--dramatic-button-color) !important;
+  }
+
+  .icon-button:hover {
+    background-color: var(--dramatic-hover-button-color) !important;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #grid {
+    display: grid;
+    grid-template-columns: minmax(20%, 350px) 1fr;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: auto;
+  }
+  
+  #menu {
+    position: sticky;
+    top: 0px;
+    background-color: var(--menu-background-color);
+    color: var(--menu-color);
+    padding: 0px 32px;
+    display: grid;
+    padding-bottom: 0px;
+    grid-template-rows: 0fr 0fr 0fr 1fr 0fr;
+    max-height: 100vh;
+    min-height: fit-content;
+    min-width: min-content;
+  }
+  
+  #tabs {
+    margin: 0px 5em;
+  }
+
+  #toolbar {
+    display: contents;
+  }
+
+  #toolbarName {
+    display: none;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  #theme-selector {
+    position: fixed;
+    right: 0.5em;
+    top: 0.5em;
+  }
+
+  #palette-icon {
+    float: right;
+    right: 0.5em;
+    top: 0.5em;
+    margin-right: 0.4em;
+  }
 }
 
 html {
@@ -31,10 +195,11 @@ h1, h2, h3, h4, h5 {
   font-family: "Funnel Display", serif;
 }
 
+#tint {
+  display: none;
+}
+
 #theme-selector {
-  position: fixed;
-  right: 0.5em;
-  top: 0.5em;
   z-index: 30;
 }
 
@@ -62,7 +227,7 @@ h1, h2, h3, h4, h5 {
 
 .icon-button {
   padding: 0.2em;
-  background-color: rgba(0,0,0,0.0);
+  background-color: var(--button-color);
   border-radius: 50%;
   border: none;  
   cursor: pointer;
@@ -76,36 +241,8 @@ h1, h2, h3, h4, h5 {
   background-color: var(--hover-button-color);
 }
 
-#palette-icon {
-  float: right;
-  margin-bottom: 0.2em;
-  margin-right: 0.4em;
-}
-
 #theme-select{
   display: none;
-}
-
-#grid {
-  display: grid;
-  grid-template-columns: minmax(20%, 350px) 1fr;
-  height: 100vh;
-  width: 100vw;
-  overflow-y: auto;
-}
-
-#menu {
-  position: sticky;
-  top: 0px;
-  background-color: var(--menu-background-color);
-  color: var(--menu-color);
-  padding: 0px 32px;
-  display: grid;
-  padding-bottom: 0px;
-  grid-template-rows: 0fr 0fr 0fr 1fr 0fr;
-  max-height: 100vh;
-  min-height: fit-content;
-  min-width: min-content;
 }
 
 #profile {
@@ -202,7 +339,6 @@ h1, h2, h3, h4, h5 {
 
 #tabs {
   height: 100vh;
-  margin: 0px 5em;
   min-width: min-content;
 }
 
@@ -267,7 +403,8 @@ p {
   border: 2px solid #ddd;
   border-radius: 10px;
   margin: auto;
-  background: rgba(0, 0, 0, 0.6);
+  margin-bottom: 32px;
+  background: var(--carousel-background);
 }
 .carouselImages {
   height: 100%;

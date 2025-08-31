@@ -2,7 +2,13 @@
   --background-color: rgb(245, 245, 245);
   --text-color: black;
 
-  --hover-button-color: rgba(150, 150, 150, 0.3);
+  --hover-button-color: rgba(150, 150, 150, 0.4);
+  --button-color: rgba(150, 150, 150, 0.2);
+
+  --dramatic-hover-button-color: rgba(255, 255, 255, 0.2);
+  --dramatic-button-color: rgba(255, 255, 255, 0.0);
+
+  --carousel-background: rgba(0, 0, 0, 0.1);
 
   --accent-color: #dec24d;
   --active-color: rgb(85, 153, 255);
@@ -15,10 +21,13 @@
 }
 
 [data-theme="mono"] {
-  --background-color: #212121;
+  --background-color: #313131;
   --text-color: white;
 
-  --hover-button-color: rgba(255, 255, 255, 0.2);
+  --hover-button-color: rgba(255, 255, 255, 0.4);
+  --button-color: rgba(255, 255, 255, 0.2);
+
+  --carousel-background: rgba(0, 0, 0, 0.6);
 
   --accent-color: #ffffff;
   --active-color: rgb(85, 153, 255);
@@ -37,7 +46,10 @@
   --text-color: black;
 
   --hover-button-color: rgba(150, 150, 150, 0.3);
-  
+  --button-color: rgba(255, 255, 255, 0.1);
+
+  --carousel-background: rgba(0, 0, 0, 0.1);
+
   --accent-color: black;
   --active-color: #8ACD00;
   --disabled-color: grey;
@@ -63,6 +75,10 @@
     text-transform: lowercase;
   }
 
+  html, body, p {
+    font-family: 'Arial Narrow', sans-serif;
+  }
+
   .navigation {
     text-transform: lowercase;
     font-family: 'Arial Narrow', sans-serif;
@@ -72,5 +88,9 @@
     font-size: xx-large;
     text-align: justify;
     text-align-last: justify;
+  }
+
+  .square-icon-button, .icon-button {
+    filter: blur(1.5px);
   }
 }

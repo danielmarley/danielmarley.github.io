@@ -18,6 +18,28 @@ function registerEvents() {
 
   registerThemeSelect()
   registerImageCarousel()
+  registerMobileMenu()
+
+  $('#grid').scrollTop(0)
+  $(window).scrollTop(0)
+}
+
+function registerMobileMenu() {
+  $('#hamburger').click(e => {
+    $('#menu').addClass('open');
+    $('#tint').addClass('open');
+    e.stopPropagation();
+  })
+
+  function closeMenu(e) {
+    $('#menu').removeClass('open');
+    $('#tint').removeClass('open');
+  }
+
+  $('.menuItem.navigate').click(closeMenu)
+  $('#tint').click(closeMenu)
+  $('#tabs').click(closeMenu)
+  $('#toolbar').click(closeMenu)
 }
 
 function registerImageCarousel() {
@@ -98,6 +120,8 @@ function navigate(e){
   const tabToOpen = $target.data('tab');
   $('.tab.selected').removeClass('selected')
   $(`#${tabToOpen}`).addClass('selected')
+  $('#grid').scrollTop(0)
+  $(window).scrollTop(0)
 }
 
 function setCookie(name, value, days=365) {

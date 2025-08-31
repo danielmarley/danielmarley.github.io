@@ -9,35 +9,46 @@
     <script src="./index.js"></script>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="themes.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
   <body>
-    <div id="theme-selector">
-      <button id="palette-icon" class="icon-button" aria-label="Select Theme">
-        <svg fill="currentColor" width="36" height="36" viewBox="0 0 32 32" id="icon" xmlns="http://www.w3.org/2000/svg" stroke="unset" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><defs><style>.cls-1{fill:none;}</style></defs><title>color palette</title><circle cx="10" cy="12" r="2"/><circle cx="16" cy="9" r="2"/><circle cx="22" cy="12" r="2"/><circle cx="23" cy="18" r="2"/><circle cx="19" cy="23" r="2"/><path d="M16.54,2A14,14,0,0,0,2,16a4.82,4.82,0,0,0,6.09,4.65l1.12-.31A3,3,0,0,1,13,23.24V27a3,3,0,0,0,3,3A14,14,0,0,0,30,15.46,14.05,14.05,0,0,0,16.54,2Zm8.11,22.31A11.93,11.93,0,0,1,16,28a1,1,0,0,1-1-1V23.24a5,5,0,0,0-5-5,5.07,5.07,0,0,0-1.33.18l-1.12.31A2.82,2.82,0,0,1,4,16,12,12,0,0,1,16.47,4,12.18,12.18,0,0,1,28,15.53,11.89,11.89,0,0,1,24.65,24.32Z"/><rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" width="32" height="32"/></svg>
+    <div id="toolbar" class="raised3">
+      <button id="hamburger" class="icon-button">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/>
+      </svg>
       </button>
-      <form id="theme-select">
-        <fieldset>
-          <div>
-            <input type="radio" id="dark" name="theme" value="dark" checked>
-            <label for="dark">dark</label><br>
-          </div>
-          <div>
-            <input type="radio" id="light" name="theme" value="light">
-            <label for="light">light</label><br>
-          </div>
-          <div>
-            <input type="radio" id="mono" name="theme" value="mono">
-            <label for="mono">mono</label><br>
-          </div>
-          <div>
-            <input type="radio" id="brat" name="theme" value="brat">
-            <label for="brat">brat</label><br>
-          </div>
-        </fieldset>
-      </form>
+      <!-- <h1 id="toolbarName">Daniel Marley</h1> -->
+      <div id="theme-selector">
+        <button id="palette-icon" class="icon-button" aria-label="Select Theme">
+          <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 7h.01m3.486 1.513h.01m-6.978 0h.01M6.99 12H7m9 4h2.706a1.957 1.957 0 0 0 1.883-1.325A9 9 0 1 0 3.043 12.89 9.1 9.1 0 0 0 8.2 20.1a8.62 8.62 0 0 0 3.769.9 2.013 2.013 0 0 0 2.03-2v-.857A2.036 2.036 0 0 1 16 16Z"/>
+          </svg>          
+        </button>
+        <form id="theme-select">
+          <fieldset>
+            <div>
+              <input type="radio" id="dark" name="theme" value="dark" checked>
+              <label for="dark">dark</label><br>
+            </div>
+            <div>
+              <input type="radio" id="light" name="theme" value="light">
+              <label for="light">light</label><br>
+            </div>
+            <div>
+              <input type="radio" id="mono" name="theme" value="mono">
+              <label for="mono">mono</label><br>
+            </div>
+            <div>
+              <input type="radio" id="brat" name="theme" value="brat">
+              <label for="brat">brat</label><br>
+            </div>
+          </fieldset>
+        </form>
+      </div>
     </div>
-
+    <div id="tint"></div>
     <div id="grid">
       <div id="menu" class="raised3">
         <img id="profile" class="raised3" src="./content/profile.jpg"/>
