@@ -409,14 +409,19 @@ p {
   background: var(--carousel-background);
 }
 .carouselImages {
+  display: flex;
   height: 100%;
   transition: transform 0.5s ease-in-out;
   white-space: nowrap;
-  display: -webkit-box;
+  /* display: -webkit-box; */
+}
+.carouselImages .imgWrapper {
+  flex: 0 0 100%;
+  max-width: 100%;
 }
 .imgWrapper {
   height: 100%;
-  width: 100%;
+  /* width: 100%; */
   transition: width 0.5s ease;
   display: inline-block;
   img {

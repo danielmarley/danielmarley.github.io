@@ -53,7 +53,10 @@ function registerImageCarousel() {
   let currentIndex = 0;
 
   function showImage(index, prevIndex) {
-    const offset = -index * $carouselImages.find('.imgWrapper').outerWidth(); // width of image
+    const slideWidth = $carouselImages.children('.imgWrapper')[0].getBoundingClientRect().width;
+    const offset = -index * slideWidth;
+
+    // const offset = -index * $carouselImages.find('.imgWrapper').outerWidth(); // width of image
     $($carouselImages.children('.imgWrapper')[index]).addClass('open');
     $carouselImages.css('transform', 'translateX(' + offset + 'px)');
 
