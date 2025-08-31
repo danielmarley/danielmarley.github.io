@@ -20,6 +20,10 @@ function registerEvents() {
   registerImageCarousel()
   registerMobileMenu()
 
+  if (location.hash && location.hash != ''){
+    $(`button.navigate[data-tab='${location.hash.replace('#', '')}'`).click();
+  }
+
   $('#grid').scrollTop(0)
   $(window).scrollTop(0)
 }
@@ -119,7 +123,6 @@ function registerThemeSelect() {
   const color = getComputedStyle(document.documentElement)
                .getPropertyValue('--menu-background-color')
                .trim();
-  console.log(color);
   document.querySelector('meta[name="theme-color"]')
           .setAttribute('content', color);
 }
@@ -133,6 +136,7 @@ function navigate(e){
   $target.addClass('selected');
 
   const tabToOpen = $target.data('tab');
+  location.hash = tabToOpen;
   $('.tab.selected').removeClass('selected')
   $(`#${tabToOpen}`).addClass('selected')
   $('#grid').scrollTop(0)
@@ -158,3 +162,7 @@ function getCookie(name) {
 
 
 $(document).ready(registerEvents)
+$(window).on('load', () => {
+  $('#grid').scrollTop(0)
+  $(window).scrollTop(0)
+});
