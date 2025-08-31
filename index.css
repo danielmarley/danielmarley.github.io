@@ -243,6 +243,8 @@ h1, h2, h3, h4, h5 {
 
 #theme-select{
   display: none;
+  position: relative;
+  right: 0.5em;
 }
 
 #profile {
