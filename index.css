@@ -208,7 +208,6 @@ h1, h2, h3, h4, h5 {
 
 .tab {
   height: 0px;
-  display: grid;
   max-width: 900px;
   margin: 0px;
   overflow-y: hidden;
@@ -318,6 +317,7 @@ p {
 }
 
 .about, .job, .project {    
+  height: fit-content;
   padding: 0px 16px;
   margin: 0px 12px;
   border: var(--tile-color) 1px solid;
