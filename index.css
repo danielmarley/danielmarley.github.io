@@ -1,5 +1,6 @@
 [data-theme="dark"] {  
-  --background-color: #592f00;
+  --background-color: #004472;
+  /* --background-color: #592f00; */
   --text-color: white;
 
   --hover-button-color: rgba(255, 255, 255, 0.2);
@@ -9,7 +10,8 @@
   --disabled-color: grey;
   --shadow-color: black;
 
-  --tile-color: #321905;
+  --tile-color: #052a42;
+  /* --tile-color: #321905; */
 
   --menu-background-color: #092334;
 }
@@ -200,15 +202,15 @@ h1, h2, h3, h4, h5 {
 
 #tabs {
   height: 100vh;
-  margin: 0px 2.5em;
+  margin: 0px 5em;
   min-width: min-content;
 }
 
 .tab {
   height: 0px;
-  width: 100%;
+  display: grid;
   max-width: 900px;
-  margin: 0px 32px;
+  margin: 0px;
   overflow-y: hidden;
   overflow-x: auto;
 
@@ -272,19 +274,31 @@ p {
   height: 100%;
   transition: transform 0.5s ease-in-out;
   white-space: nowrap;
+  display: -webkit-box;
 }
 .imgWrapper {
+  height: 100%;
   width: 100%;
+  transition: width 0.5s ease;
   display: inline-block;
   img {
-    height: 100%;
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
     margin: 0px auto;
     object-fit: cover;
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.0;
   }
 }
+.imgWrapper.open {
+  img {
+    opacity: 1.0;
+  }
+}
+
 .carousel-button {
   position: absolute;
   top: 50%;

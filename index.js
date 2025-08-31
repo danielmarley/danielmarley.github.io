@@ -3,6 +3,10 @@ function registerEvents() {
     navigate(e)
   })
 
+  $('button[data-link]').click(e => {
+    window.open($(e.currentTarget).data('link'), '_blank');
+  })
+
   $("#resumeDownload").click(e => {
     const link = document.createElement("a");
     link.href = "content/Marley Resume.pdf";
@@ -13,35 +17,49 @@ function registerEvents() {
   });
 
   registerThemeSelect()
+  registerImageCarousel()
+}
 
-  $('button[data-link]').click(e => {
-    window.open($(e.currentTarget).data('link'), '_blank');
-  })
-
+function registerImageCarousel() {
   const $carouselImages = $('.carouselImages');
   const totalImages = $carouselImages.children('.imgWrapper').length;
+
   let currentIndex = 0;
 
-  function showImage(index) {
-    const offset = -index * $carouselImages.outerWidth(); // width of image
+  function showImage(index, prevIndex) {
+    const offset = -index * $carouselImages.find('.imgWrapper').outerWidth(); // width of image
+    $($carouselImages.children('.imgWrapper')[index]).addClass('open');
     $carouselImages.css('transform', 'translateX(' + offset + 'px)');
+
+    setTimeout(() => {
+      if (prevIndex !== undefined) {
+        $($carouselImages.children('.imgWrapper')[prevIndex]).removeClass('open');
+      }
+    }, 500)
   }
 
   $('.next').click(function() {
+    prevIndex = currentIndex
     currentIndex = (currentIndex + 1) % totalImages;
-    showImage(currentIndex);
+    showImage(currentIndex, prevIndex);
   });
 
   $('.prev').click(function() {
+    prevIndex = currentIndex
     currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-    showImage(currentIndex);
+    showImage(currentIndex, prevIndex);
   });
 
   // Auto slide every 3 seconds
   setInterval(function() {
+    prevIndex = currentIndex
     currentIndex = (currentIndex + 1) % totalImages;
-    showImage(currentIndex);
+    showImage(currentIndex, prevIndex);
   }, 5000);
+
+  $(window).on('resize', function() {
+    showImage(currentIndex, undefined);
+  })
 }
 
 function registerThemeSelect() {
