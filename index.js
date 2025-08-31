@@ -17,6 +17,31 @@ function registerEvents() {
   $('button[data-link]').click(e => {
     window.open($(e.currentTarget).data('link'), '_blank');
   })
+
+  const $carouselImages = $('.carouselImages');
+  const totalImages = $carouselImages.children('.imgWrapper').length;
+  let currentIndex = 0;
+
+  function showImage(index) {
+    const offset = -index * $carouselImages.outerWidth(); // width of image
+    $carouselImages.css('transform', 'translateX(' + offset + 'px)');
+  }
+
+  $('.next').click(function() {
+    currentIndex = (currentIndex + 1) % totalImages;
+    showImage(currentIndex);
+  });
+
+  $('.prev').click(function() {
+    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+    showImage(currentIndex);
+  });
+
+  // Auto slide every 3 seconds
+  setInterval(function() {
+    currentIndex = (currentIndex + 1) % totalImages;
+    showImage(currentIndex);
+  }, 5000);
 }
 
 function registerThemeSelect() {

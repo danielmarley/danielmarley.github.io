@@ -6,7 +6,6 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"></script>
-      <script src="./content/page.js"></script>
     <script src="./index.js"></script>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="themes.css">
@@ -76,15 +75,35 @@
       <div id="tabs">
         <div id="background" class="tab selected">
           <h1>About Me</h1>
-          <p id="text">
-            My name is Daniel Marley, I'm 26, currently based in Philadelphia, and a full-time, full-stack Software Engineer at J.P. Morgan Chase. I've been working full time since graduating from The George Washington University in 2020 with a B.S. in Computer Science and recently completed my Master's degree in Artificial Intelligence at The Johns Hopkins University.
-          </p>
-          <p>
-            AI has been a strong interest of mine since my time in undergrad, where it was my area of focus in my major. Looking forward, with my Master's degree in hand, I am eagerly searching for projects where I can apply my skills. I want to leverage AI to solve real-world problems that have meaningful impact, particularly in areas of sustainability and health.
-          </p>
-          <p>
-            Outside of work, I stay active in local recreational sport leagues for volleyball, dodgeball, and kickball. I've recently returned to wheelthrowing as a hobby and also like to kayak on the Delaware River when I can. I find each of these activities not only deeply rewarding and but also a balancing to my work.
-          </p>
+          <div class="about">
+            <p id="text">
+              My name is Daniel Marley, I'm 26, currently based in Philadelphia, and a full-time, full-stack Software Engineer at J.P. Morgan Chase. I've been working full time since graduating from The George Washington University in 2020 with a B.S. in Computer Science and recently completed my Master's degree in Artificial Intelligence at The Johns Hopkins University.
+            </p>
+            <p>
+              AI has been a strong interest of mine since my time in undergrad, where it was my area of focus in my major. Looking forward, with my Master's degree in hand, I am eagerly searching for projects where I can apply my skills. I want to leverage AI to solve real-world problems that have meaningful impact, particularly in areas of sustainability and health.
+            </p>
+            <p>
+              Outside of work, I stay active in local recreational sport leagues for volleyball, dodgeball, and kickball. I've recently returned to wheelthrowing as a hobby and also like to kayak on the Delaware River when I can. I find each of these activities not only deeply rewarding and but also a balancing to my work.
+            </p>
+          </div>
+          <div class="carousel">
+            <div class="carouselImages">
+              <div class="imgWrapper">
+                <img src="content/dodgeball.jpg">
+              </div>
+              <div class="imgWrapper"> 
+                <img src="content/pottery1.jpg">
+              </div>
+              <div class="imgWrapper">
+                <img src="content/kayak.jpg">
+              </div>
+              <div class="imgWrapper">
+                <img src="content/pottery2.jpg">
+              </div>
+            </div>
+            <button class="carousel-button prev">&#10094;</button>
+            <button class="carousel-button next">&#10095;</button>
+          </div>
         </div>
         <div id="experience" class="tab">
           <h1>Experience</h1>
