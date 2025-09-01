@@ -125,6 +125,24 @@
   .icon-button:hover {
     background-color: var(--dramatic-hover-button-color) !important;
   }
+
+  .jobHeadline {
+    display: grid;
+  }
+
+  .jobHeadline h2:first-child {
+    order: 2;
+    margin-top: 0px;
+  }
+  
+  .date {
+    order: 1;
+    float: right;
+    text-align: right;
+    margin-left: 48px;
+    font-weight: 100;
+    text-decoration: none !important;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -177,6 +195,23 @@
     right: 0.5em;
     top: 0.5em;
     margin-right: 0.4em;
+  }
+
+  .jobHeadline {
+    /* grid-template-columns: 1fr 0fr; */
+    display: flex;
+    h2 {
+      display: inline-block;
+    }
+  }
+  
+  .date {
+    flex: 1;
+    float: right;
+    text-align: right;
+    margin-left: 48px;
+    font-weight: 100;
+    text-decoration: none !important;
   }
 }
 
@@ -492,8 +527,10 @@ p {
 
 .date {
   float: right;
+  text-align: right;
   margin-left: 48px;
   font-weight: 100;
+  text-decoration: none !important;
 }
 
 .tarb {
